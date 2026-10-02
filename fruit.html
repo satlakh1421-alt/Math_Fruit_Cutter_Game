@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🍉Fruit Cutter - Subtraction</title>
+    <link rel="stylesheet" href="fruit.css">
+</head>
+<body>
+    <div id="game-viewport">
+        <div id="screen-start" class="screen-layer">
+            <h1>🍉 FRUIT CUTTER 🥝</h1>
+            <h2>SUBTRACTION DOJO</h2>
+            <p>Slice the fruit with the correct answer!</p>
+            <div>
+                <button id="btn-main-play">PLAY GAME</button>
+                <button id="btn-main-rules">HOW TO PLAY</button>
+                <button id="btn-toggle-sound">🔊 SOUND: ON</button>
+            </div>
+        </div>
+
+        <div id="screen-gameplay" class="screen-layer hidden">
+            <div id="hud-bar">
+                <div>SCORE: <span id="txt-score">000</span></div>
+                <div>TARGET: <span id="txt-target">100</span></div>
+                <div>LEVEL: <span id="txt-level">1</span></div>
+                <div id="math-problem-display">SOLVE: <span id="txt-math-problem">?</span></div>
+                <div>LIVES: <span id="txt-lives">❤️❤️❤️</span></div>
+            </div>
+            <button id="btn-game-pause">|| PAUSE</button>
+            
+            <div id="active-arena"></div>
+        </div>
+
+        <div id="screen-scoreboard" class="screen-layer hidden">
+            <h2 id="txt-board-title">NINJA MASTER!</h2>
+            <p id="txt-board-desc">Great slicing!</p>
+            <p>Score: <span id="txt-final-score">0</span> | Level: <span id="txt-final-level">1</span></p>
+            <div>
+                <button id="btn-board-next">NEXT LEVEL</button>
+                <button id="btn-board-retry">MAIN MENU</button>
+            </div>
+        </div>
+
+        <div id="rules-overlay" class="overlay hidden">
+            <h2>RULES</h2>
+            <p>Click and drag (swipe) to cut fruits!</p>
+            <p>Only cut the fruit with the correct answer.</p>
+            <p>If you miss the correct fruit twice, you lose a life!</p>
+            <p>If you cut the wrong fruit, you lose a life instantly!</p>
+            <p>Cut the 💖 heart to recover a lost life!</p>
+            <button id="btn-rules-close">CLOSE</button>
+        </div>
+
+        <div id="pause-overlay" class="overlay hidden">
+            <h2>GAME PAUSED</h2>
+            <button id="btn-pause-resume">RESUME</button>
+            <button id="btn-pause-home">QUIT TO MENU</button>
+        </div>
+
+        <div id="countdown-ticker-overlay" class="overlay hidden">
+            <h1 id="txt-countdown-number">3</h1>
+        </div>
+    </div>
+
+    <script src="fruit.js"></script>
+</body>
+</html>
